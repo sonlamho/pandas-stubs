@@ -4,11 +4,11 @@
 
 from pandas._libs.tslibs import offsets as liboffsets
 from pandas._libs.tslibs.offsets import BaseOffset
-from datetime import datetime
 from pandas import Timestamp
+from datetime import datetime
 from typing import Any, Optional, Union
 
-_ANYDATETIME = Union[datetime,Timestamp]
+_ANYDATETIME = Union[datetime, Timestamp]
 
 class DateOffset(BaseOffset):
     normalize: bool = ...
@@ -63,7 +63,6 @@ class CustomBusinessHour(_CustomMixin, BusinessHourMixin, SingleConstructorOffse
     def __init__(self, n: int = ..., normalize: bool = ..., weekmask: str = ..., holidays: Optional[Any] = ..., calendar: Optional[Any] = ..., start: str = ..., end: str = ..., offset: Any = ...) -> None: ...
 
 class MonthOffset(SingleConstructorOffset):
-    __init__: Any = ...
     @property
     def name(self): ...
     def onOffset(self, dt: Any): ...
@@ -174,7 +173,6 @@ class FY5253Quarter(DateOffset):
     def rule_code(self): ...
 
 class Easter(DateOffset):
-    __init__: Any = ...
     def apply(self, other: Any): ...
     def onOffset(self, dt: Any): ...
 

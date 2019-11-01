@@ -1,23 +1,17 @@
 
-from typing import overload
+from typing import overload, Union
 from pandas import Timestamp
 from datetime import datetime
 
-class BaseOffset:
+_ANYDATETIME = Union[datetime, Timestamp]
+
+class BaseOffset(object):
 
   def __init__(self, n:int=..., normalize:bool=...): ...
 
-  @overload
-  def __add__(self, other: Timestamp) -> Timestamp: ...
+  def __add__(self, other: _ANYDATETIME) -> Timestamp: ...
 
-  @overload
-  def __add__(self, other: datetime) -> Timestamp: ...
-
-  @overload
-  def __rsub__(self, other: Timestamp) -> Timestamp: ...
-
-  @overload
-  def __rsub__(self, other: datetime) -> Timestamp: ...
+  def __rsub__(self, other: _ANYDATETIME) -> Timestamp: ...
 
   def __mul__(self, other: float) -> BaseOffset: ...
 
