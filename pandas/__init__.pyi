@@ -12,7 +12,7 @@ from ._version import get_versions
 from pandas.core import base, generic
 from pandas.core.generic import NDFrame
 from typing import Any, Optional, Iterator, Union, TypeVar, overload, Sequence, Hashable, List, Tuple
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 from numpy import number, timedelta64, ndarray
 
 __docformat__: str
@@ -338,6 +338,7 @@ class Timestamp:
   def to_pydatetime(self) -> datetime: ...
   def strftime(self, str) -> str: ...
   def normalize(self) -> Timestamp: ...
+  def date(self) -> date: ...
 
 
 class Timedelta:
