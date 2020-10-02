@@ -11,6 +11,7 @@ class ExtType:
 
 def pack(o: Any, stream: Any, **kwargs: Any) -> None: ...
 def packb(o: Any, **kwargs: Any): ...
+
 load = unpack
 loads = unpackb
 dump = pack

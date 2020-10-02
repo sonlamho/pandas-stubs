@@ -4,7 +4,18 @@
 
 from typing import Any, Optional
 
-def frame_apply(obj: Any, func: Any, axis: int = ..., broadcast: Optional[Any] = ..., raw: bool = ..., reduce: Optional[Any] = ..., result_type: Optional[Any] = ..., ignore_failures: bool = ..., args: Optional[Any] = ..., kwds: Optional[Any] = ...): ...
+def frame_apply(
+    obj: Any,
+    func: Any,
+    axis: int = ...,
+    broadcast: Optional[Any] = ...,
+    raw: bool = ...,
+    reduce: Optional[Any] = ...,
+    result_type: Optional[Any] = ...,
+    ignore_failures: bool = ...,
+    args: Optional[Any] = ...,
+    kwds: Optional[Any] = ...,
+): ...
 
 class FrameApply:
     obj: Any = ...
@@ -17,7 +28,18 @@ class FrameApply:
     result: Any = ...
     res_index: Any = ...
     res_columns: Any = ...
-    def __init__(self, obj: Any, func: Any, broadcast: Any, raw: Any, reduce: Any, result_type: Any, ignore_failures: Any, args: Any, kwds: Any) -> None: ...
+    def __init__(
+        self,
+        obj: Any,
+        func: Any,
+        broadcast: Any,
+        raw: Any,
+        reduce: Any,
+        result_type: Any,
+        ignore_failures: Any,
+        args: Any,
+        kwds: Any,
+    ) -> None: ...
     @property
     def columns(self): ...
     @property

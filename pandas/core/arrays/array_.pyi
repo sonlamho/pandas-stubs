@@ -4,4 +4,8 @@
 
 from typing import Optional
 
-def array(data: Sequence[object], dtype: Optional[Union[str, np.dtype, ExtensionDtype]]=..., copy: bool=...) -> ExtensionArray: ...
+def array(
+    data: Sequence[object],
+    dtype: Optional[Union[str, np.dtype, ExtensionDtype]] = ...,
+    copy: bool = ...,
+) -> ExtensionArray: ...

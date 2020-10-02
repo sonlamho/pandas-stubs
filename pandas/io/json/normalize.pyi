@@ -5,4 +5,12 @@
 from typing import Any, Optional
 
 def nested_to_record(ds: Any, prefix: str = ..., sep: str = ..., level: int = ...): ...
-def json_normalize(data: Any, record_path: Optional[Any] = ..., meta: Optional[Any] = ..., meta_prefix: Optional[Any] = ..., record_prefix: Optional[Any] = ..., errors: str = ..., sep: str = ...): ...
+def json_normalize(
+    data: Any,
+    record_path: Optional[Any] = ...,
+    meta: Optional[Any] = ...,
+    meta_prefix: Optional[Any] = ...,
+    record_prefix: Optional[Any] = ...,
+    errors: str = ...,
+    sep: str = ...,
+): ...

@@ -25,5 +25,7 @@ class TimedeltaProperties(Properties):
 
 class PeriodProperties(Properties): ...
 
-class CombinedDatetimelikeProperties(DatetimeProperties, TimedeltaProperties, PeriodProperties):
+class CombinedDatetimelikeProperties(
+    DatetimeProperties, TimedeltaProperties, PeriodProperties
+):
     def __new__(cls, data: Any): ...

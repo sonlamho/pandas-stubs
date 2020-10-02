@@ -5,4 +5,10 @@
 from typing import Any, Optional
 
 def format_date_labels(ax: Any, rot: Any) -> None: ...
-def table(ax: Any, data: Any, rowLabels: Optional[Any] = ..., colLabels: Optional[Any] = ..., **kwargs: Any): ...
+def table(
+    ax: Any,
+    data: Any,
+    rowLabels: Optional[Any] = ...,
+    colLabels: Optional[Any] = ...,
+    **kwargs: Any
+): ...

@@ -30,6 +30,30 @@ class CSVFormatter:
     chunksize: Any = ...
     data_index: Any = ...
     nlevels: Any = ...
-    def __init__(self, obj: Any, path_or_buf: Optional[Any] = ..., sep: str = ..., na_rep: str = ..., float_format: Optional[Any] = ..., cols: Optional[Any] = ..., header: bool = ..., index: bool = ..., index_label: Optional[Any] = ..., mode: str = ..., nanRep: Optional[Any] = ..., encoding: Optional[Any] = ..., compression: str = ..., quoting: Optional[Any] = ..., line_terminator: str = ..., chunksize: Optional[Any] = ..., tupleize_cols: bool = ..., quotechar: str = ..., date_format: Optional[Any] = ..., doublequote: bool = ..., escapechar: Optional[Any] = ..., decimal: str = ...) -> None: ...
+    def __init__(
+        self,
+        obj: Any,
+        path_or_buf: Optional[Any] = ...,
+        sep: str = ...,
+        na_rep: str = ...,
+        float_format: Optional[Any] = ...,
+        cols: Optional[Any] = ...,
+        header: bool = ...,
+        index: bool = ...,
+        index_label: Optional[Any] = ...,
+        mode: str = ...,
+        nanRep: Optional[Any] = ...,
+        encoding: Optional[Any] = ...,
+        compression: str = ...,
+        quoting: Optional[Any] = ...,
+        line_terminator: str = ...,
+        chunksize: Optional[Any] = ...,
+        tupleize_cols: bool = ...,
+        quotechar: str = ...,
+        date_format: Optional[Any] = ...,
+        doublequote: bool = ...,
+        escapechar: Optional[Any] = ...,
+        decimal: str = ...,
+    ) -> None: ...
     writer: Any = ...
     def save(self) -> None: ...

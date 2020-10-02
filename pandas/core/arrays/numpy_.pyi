@@ -22,6 +22,7 @@ class PandasDtype(ExtensionDtype):
     def kind(self): ...
     @property
     def itemsize(self): ...
+
 NDArrayOperatorsMixin = object
 
 class PandasArray(ExtensionArray, ExtensionOpsMixin, NDArrayOperatorsMixin):
@@ -37,22 +38,123 @@ class PandasArray(ExtensionArray, ExtensionOpsMixin, NDArrayOperatorsMixin):
     @property
     def nbytes(self): ...
     def isna(self): ...
-    def fillna(self, value: Optional[Any] = ..., method: Optional[Any] = ..., limit: Optional[Any] = ...): ...
-    def take(self, indices: Any, allow_fill: bool = ..., fill_value: Optional[Any] = ...): ...
+    def fillna(
+        self,
+        value: Optional[Any] = ...,
+        method: Optional[Any] = ...,
+        limit: Optional[Any] = ...,
+    ): ...
+    def take(
+        self, indices: Any, allow_fill: bool = ..., fill_value: Optional[Any] = ...
+    ): ...
     def copy(self, deep: bool = ...): ...
     def unique(self): ...
-    def any(self, axis: Optional[Any] = ..., out: Optional[Any] = ..., keepdims: bool = ..., skipna: bool = ...): ...
-    def all(self, axis: Optional[Any] = ..., out: Optional[Any] = ..., keepdims: bool = ..., skipna: bool = ...): ...
-    def min(self, axis: Optional[Any] = ..., out: Optional[Any] = ..., keepdims: bool = ..., skipna: bool = ...): ...
-    def max(self, axis: Optional[Any] = ..., out: Optional[Any] = ..., keepdims: bool = ..., skipna: bool = ...): ...
-    def sum(self, axis: Optional[Any] = ..., dtype: Optional[Any] = ..., out: Optional[Any] = ..., keepdims: bool = ..., initial: Optional[Any] = ..., skipna: bool = ..., min_count: int = ...): ...
-    def prod(self, axis: Optional[Any] = ..., dtype: Optional[Any] = ..., out: Optional[Any] = ..., keepdims: bool = ..., initial: Optional[Any] = ..., skipna: bool = ..., min_count: int = ...): ...
-    def mean(self, axis: Optional[Any] = ..., dtype: Optional[Any] = ..., out: Optional[Any] = ..., keepdims: bool = ..., skipna: bool = ...): ...
-    def median(self, axis: Optional[Any] = ..., out: Optional[Any] = ..., overwrite_input: bool = ..., keepdims: bool = ..., skipna: bool = ...): ...
-    def std(self, axis: Optional[Any] = ..., dtype: Optional[Any] = ..., out: Optional[Any] = ..., ddof: int = ..., keepdims: bool = ..., skipna: bool = ...): ...
-    def var(self, axis: Optional[Any] = ..., dtype: Optional[Any] = ..., out: Optional[Any] = ..., ddof: int = ..., keepdims: bool = ..., skipna: bool = ...): ...
-    def sem(self, axis: Optional[Any] = ..., dtype: Optional[Any] = ..., out: Optional[Any] = ..., ddof: int = ..., keepdims: bool = ..., skipna: bool = ...): ...
-    def kurt(self, axis: Optional[Any] = ..., dtype: Optional[Any] = ..., out: Optional[Any] = ..., keepdims: bool = ..., skipna: bool = ...): ...
-    def skew(self, axis: Optional[Any] = ..., dtype: Optional[Any] = ..., out: Optional[Any] = ..., keepdims: bool = ..., skipna: bool = ...): ...
+    def any(
+        self,
+        axis: Optional[Any] = ...,
+        out: Optional[Any] = ...,
+        keepdims: bool = ...,
+        skipna: bool = ...,
+    ): ...
+    def all(
+        self,
+        axis: Optional[Any] = ...,
+        out: Optional[Any] = ...,
+        keepdims: bool = ...,
+        skipna: bool = ...,
+    ): ...
+    def min(
+        self,
+        axis: Optional[Any] = ...,
+        out: Optional[Any] = ...,
+        keepdims: bool = ...,
+        skipna: bool = ...,
+    ): ...
+    def max(
+        self,
+        axis: Optional[Any] = ...,
+        out: Optional[Any] = ...,
+        keepdims: bool = ...,
+        skipna: bool = ...,
+    ): ...
+    def sum(
+        self,
+        axis: Optional[Any] = ...,
+        dtype: Optional[Any] = ...,
+        out: Optional[Any] = ...,
+        keepdims: bool = ...,
+        initial: Optional[Any] = ...,
+        skipna: bool = ...,
+        min_count: int = ...,
+    ): ...
+    def prod(
+        self,
+        axis: Optional[Any] = ...,
+        dtype: Optional[Any] = ...,
+        out: Optional[Any] = ...,
+        keepdims: bool = ...,
+        initial: Optional[Any] = ...,
+        skipna: bool = ...,
+        min_count: int = ...,
+    ): ...
+    def mean(
+        self,
+        axis: Optional[Any] = ...,
+        dtype: Optional[Any] = ...,
+        out: Optional[Any] = ...,
+        keepdims: bool = ...,
+        skipna: bool = ...,
+    ): ...
+    def median(
+        self,
+        axis: Optional[Any] = ...,
+        out: Optional[Any] = ...,
+        overwrite_input: bool = ...,
+        keepdims: bool = ...,
+        skipna: bool = ...,
+    ): ...
+    def std(
+        self,
+        axis: Optional[Any] = ...,
+        dtype: Optional[Any] = ...,
+        out: Optional[Any] = ...,
+        ddof: int = ...,
+        keepdims: bool = ...,
+        skipna: bool = ...,
+    ): ...
+    def var(
+        self,
+        axis: Optional[Any] = ...,
+        dtype: Optional[Any] = ...,
+        out: Optional[Any] = ...,
+        ddof: int = ...,
+        keepdims: bool = ...,
+        skipna: bool = ...,
+    ): ...
+    def sem(
+        self,
+        axis: Optional[Any] = ...,
+        dtype: Optional[Any] = ...,
+        out: Optional[Any] = ...,
+        ddof: int = ...,
+        keepdims: bool = ...,
+        skipna: bool = ...,
+    ): ...
+    def kurt(
+        self,
+        axis: Optional[Any] = ...,
+        dtype: Optional[Any] = ...,
+        out: Optional[Any] = ...,
+        keepdims: bool = ...,
+        skipna: bool = ...,
+    ): ...
+    def skew(
+        self,
+        axis: Optional[Any] = ...,
+        dtype: Optional[Any] = ...,
+        out: Optional[Any] = ...,
+        keepdims: bool = ...,
+        skipna: bool = ...,
+    ): ...
     def to_numpy(self, dtype: Optional[Any] = ..., copy: bool = ...): ...
     def __invert__(self): ...

@@ -19,23 +19,93 @@ class bottleneck_switch:
     def __init__(self, **kwargs: Any) -> None: ...
     def __call__(self, alt: Any): ...
 
-def nanany(values: Any, axis: Optional[Any] = ..., skipna: bool = ..., mask: Optional[Any] = ...): ...
-def nanall(values: Any, axis: Optional[Any] = ..., skipna: bool = ..., mask: Optional[Any] = ...): ...
-def nansum(values: Any, axis: Optional[Any] = ..., skipna: bool = ..., min_count: int = ..., mask: Optional[Any] = ...): ...
-def nanmean(values: Any, axis: Optional[Any] = ..., skipna: bool = ..., mask: Optional[Any] = ...): ...
-def nanmedian(values: Any, axis: Optional[Any] = ..., skipna: bool = ..., mask: Optional[Any] = ...): ...
-def nanstd(values: Any, axis: Optional[Any] = ..., skipna: bool = ..., ddof: int = ..., mask: Optional[Any] = ...): ...
-def nanvar(values: Any, axis: Optional[Any] = ..., skipna: bool = ..., ddof: int = ..., mask: Optional[Any] = ...): ...
-def nansem(values: Any, axis: Optional[Any] = ..., skipna: bool = ..., ddof: int = ..., mask: Optional[Any] = ...): ...
+def nanany(
+    values: Any,
+    axis: Optional[Any] = ...,
+    skipna: bool = ...,
+    mask: Optional[Any] = ...,
+): ...
+def nanall(
+    values: Any,
+    axis: Optional[Any] = ...,
+    skipna: bool = ...,
+    mask: Optional[Any] = ...,
+): ...
+def nansum(
+    values: Any,
+    axis: Optional[Any] = ...,
+    skipna: bool = ...,
+    min_count: int = ...,
+    mask: Optional[Any] = ...,
+): ...
+def nanmean(
+    values: Any,
+    axis: Optional[Any] = ...,
+    skipna: bool = ...,
+    mask: Optional[Any] = ...,
+): ...
+def nanmedian(
+    values: Any,
+    axis: Optional[Any] = ...,
+    skipna: bool = ...,
+    mask: Optional[Any] = ...,
+): ...
+def nanstd(
+    values: Any,
+    axis: Optional[Any] = ...,
+    skipna: bool = ...,
+    ddof: int = ...,
+    mask: Optional[Any] = ...,
+): ...
+def nanvar(
+    values: Any,
+    axis: Optional[Any] = ...,
+    skipna: bool = ...,
+    ddof: int = ...,
+    mask: Optional[Any] = ...,
+): ...
+def nansem(
+    values: Any,
+    axis: Optional[Any] = ...,
+    skipna: bool = ...,
+    ddof: int = ...,
+    mask: Optional[Any] = ...,
+): ...
 
 nanmin: Any
 nanmax: Any
 
-def nanargmax(values: Any, axis: Optional[Any] = ..., skipna: bool = ..., mask: Optional[Any] = ...): ...
-def nanargmin(values: Any, axis: Optional[Any] = ..., skipna: bool = ..., mask: Optional[Any] = ...): ...
-def nanskew(values: Any, axis: Optional[Any] = ..., skipna: bool = ..., mask: Optional[Any] = ...): ...
-def nankurt(values: Any, axis: Optional[Any] = ..., skipna: bool = ..., mask: Optional[Any] = ...): ...
-def nanprod(values: Any, axis: Optional[Any] = ..., skipna: bool = ..., min_count: int = ..., mask: Optional[Any] = ...): ...
+def nanargmax(
+    values: Any,
+    axis: Optional[Any] = ...,
+    skipna: bool = ...,
+    mask: Optional[Any] = ...,
+): ...
+def nanargmin(
+    values: Any,
+    axis: Optional[Any] = ...,
+    skipna: bool = ...,
+    mask: Optional[Any] = ...,
+): ...
+def nanskew(
+    values: Any,
+    axis: Optional[Any] = ...,
+    skipna: bool = ...,
+    mask: Optional[Any] = ...,
+): ...
+def nankurt(
+    values: Any,
+    axis: Optional[Any] = ...,
+    skipna: bool = ...,
+    mask: Optional[Any] = ...,
+): ...
+def nanprod(
+    values: Any,
+    axis: Optional[Any] = ...,
+    skipna: bool = ...,
+    min_count: int = ...,
+    mask: Optional[Any] = ...,
+): ...
 def nancorr(a: Any, b: Any, method: str = ..., min_periods: Optional[Any] = ...): ...
 def get_corr_func(method: Any): ...
 def nancov(a: Any, b: Any, min_periods: Optional[Any] = ...): ...
@@ -48,4 +118,12 @@ nanle: Any
 naneq: Any
 nanne: Any
 
-def nanpercentile(values: Any, q: Any, axis: Any, na_value: Any, mask: Any, ndim: Any, interpolation: Any): ...
+def nanpercentile(
+    values: Any,
+    q: Any,
+    axis: Any,
+    na_value: Any,
+    mask: Any,
+    ndim: Any,
+    interpolation: Any,
+): ...

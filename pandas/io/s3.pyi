@@ -4,4 +4,9 @@
 
 from typing import Any, Optional
 
-def get_filepath_or_buffer(filepath_or_buffer: Any, encoding: Optional[Any] = ..., compression: Optional[Any] = ..., mode: Optional[Any] = ...): ...
+def get_filepath_or_buffer(
+    filepath_or_buffer: Any,
+    encoding: Optional[Any] = ...,
+    compression: Optional[Any] = ...,
+    mode: Optional[Any] = ...,
+): ...

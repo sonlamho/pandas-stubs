@@ -4,5 +4,23 @@
 
 from typing import Any, Optional
 
-def to_datetime(arg: Any, errors: str = ..., dayfirst: bool = ..., yearfirst: bool = ..., utc: Optional[Any] = ..., box: bool = ..., format: Optional[Any] = ..., exact: bool = ..., unit: Optional[Any] = ..., infer_datetime_format: bool = ..., origin: str = ..., cache: bool = ...): ...
-def to_time(arg: Any, format: Optional[Any] = ..., infer_time_format: bool = ..., errors: str = ...): ...
+def to_datetime(
+    arg: Any,
+    errors: str = ...,
+    dayfirst: bool = ...,
+    yearfirst: bool = ...,
+    utc: Optional[Any] = ...,
+    box: bool = ...,
+    format: Optional[Any] = ...,
+    exact: bool = ...,
+    unit: Optional[Any] = ...,
+    infer_datetime_format: bool = ...,
+    origin: str = ...,
+    cache: bool = ...,
+): ...
+def to_time(
+    arg: Any,
+    format: Optional[Any] = ...,
+    infer_time_format: bool = ...,
+    errors: str = ...,
+): ...

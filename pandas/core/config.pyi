@@ -5,9 +5,9 @@
 from collections import namedtuple
 from typing import Any, Optional
 
-DeprecatedOption = namedtuple('DeprecatedOption', 'key msg rkey removal_ver')
+DeprecatedOption = namedtuple("DeprecatedOption", "key msg rkey removal_ver")
 
-RegisteredOption = namedtuple('RegisteredOption', 'key defval doc validator cb')
+RegisteredOption = namedtuple("RegisteredOption", "key defval doc validator cb")
 
 class OptionError(AttributeError, KeyError): ...
 
@@ -40,8 +40,19 @@ class option_context:
     def __enter__(self) -> None: ...
     def __exit__(self, *args: Any) -> None: ...
 
-def register_option(key: Any, defval: Any, doc: str = ..., validator: Optional[Any] = ..., cb: Optional[Any] = ...) -> None: ...
-def deprecate_option(key: Any, msg: Optional[Any] = ..., rkey: Optional[Any] = ..., removal_ver: Optional[Any] = ...) -> None: ...
+def register_option(
+    key: Any,
+    defval: Any,
+    doc: str = ...,
+    validator: Optional[Any] = ...,
+    cb: Optional[Any] = ...,
+) -> None: ...
+def deprecate_option(
+    key: Any,
+    msg: Optional[Any] = ...,
+    rkey: Optional[Any] = ...,
+    removal_ver: Optional[Any] = ...,
+) -> None: ...
 def pp_options_list(keys: Any, width: int = ..., _print: bool = ...): ...
 def config_prefix(prefix: Any): ...
 def is_type_factory(_type: Any): ...

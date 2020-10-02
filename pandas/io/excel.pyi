@@ -5,20 +5,93 @@
 import abc
 from typing import Any, Optional
 
-def read_excel(io: Any, sheet_name: int = ..., header: int = ..., names: Optional[Any] = ..., index_col: Optional[Any] = ..., parse_cols: Optional[Any] = ..., usecols: Optional[Any] = ..., squeeze: bool = ..., dtype: Optional[Any] = ..., engine: Optional[Any] = ..., converters: Optional[Any] = ..., true_values: Optional[Any] = ..., false_values: Optional[Any] = ..., skiprows: Optional[Any] = ..., nrows: Optional[Any] = ..., na_values: Optional[Any] = ..., keep_default_na: bool = ..., verbose: bool = ..., parse_dates: bool = ..., date_parser: Optional[Any] = ..., thousands: Optional[Any] = ..., comment: Optional[Any] = ..., skip_footer: int = ..., skipfooter: int = ..., convert_float: bool = ..., mangle_dupe_cols: bool = ..., **kwds: Any): ...
+def read_excel(
+    io: Any,
+    sheet_name: int = ...,
+    header: int = ...,
+    names: Optional[Any] = ...,
+    index_col: Optional[Any] = ...,
+    parse_cols: Optional[Any] = ...,
+    usecols: Optional[Any] = ...,
+    squeeze: bool = ...,
+    dtype: Optional[Any] = ...,
+    engine: Optional[Any] = ...,
+    converters: Optional[Any] = ...,
+    true_values: Optional[Any] = ...,
+    false_values: Optional[Any] = ...,
+    skiprows: Optional[Any] = ...,
+    nrows: Optional[Any] = ...,
+    na_values: Optional[Any] = ...,
+    keep_default_na: bool = ...,
+    verbose: bool = ...,
+    parse_dates: bool = ...,
+    date_parser: Optional[Any] = ...,
+    thousands: Optional[Any] = ...,
+    comment: Optional[Any] = ...,
+    skip_footer: int = ...,
+    skipfooter: int = ...,
+    convert_float: bool = ...,
+    mangle_dupe_cols: bool = ...,
+    **kwds: Any
+): ...
 
 class _XlrdReader:
     book: Any = ...
     def __init__(self, filepath_or_buffer: Any) -> None: ...
     @property
     def sheet_names(self): ...
-    def parse(self, sheet_name: int = ..., header: int = ..., names: Optional[Any] = ..., index_col: Optional[Any] = ..., usecols: Optional[Any] = ..., squeeze: bool = ..., dtype: Optional[Any] = ..., true_values: Optional[Any] = ..., false_values: Optional[Any] = ..., skiprows: Optional[Any] = ..., nrows: Optional[Any] = ..., na_values: Optional[Any] = ..., verbose: bool = ..., parse_dates: bool = ..., date_parser: Optional[Any] = ..., thousands: Optional[Any] = ..., comment: Optional[Any] = ..., skipfooter: int = ..., convert_float: bool = ..., mangle_dupe_cols: bool = ..., **kwds: Any): ...
+    def parse(
+        self,
+        sheet_name: int = ...,
+        header: int = ...,
+        names: Optional[Any] = ...,
+        index_col: Optional[Any] = ...,
+        usecols: Optional[Any] = ...,
+        squeeze: bool = ...,
+        dtype: Optional[Any] = ...,
+        true_values: Optional[Any] = ...,
+        false_values: Optional[Any] = ...,
+        skiprows: Optional[Any] = ...,
+        nrows: Optional[Any] = ...,
+        na_values: Optional[Any] = ...,
+        verbose: bool = ...,
+        parse_dates: bool = ...,
+        date_parser: Optional[Any] = ...,
+        thousands: Optional[Any] = ...,
+        comment: Optional[Any] = ...,
+        skipfooter: int = ...,
+        convert_float: bool = ...,
+        mangle_dupe_cols: bool = ...,
+        **kwds: Any
+    ): ...
 
 class ExcelFile:
     io: Any = ...
     def __init__(self, io: Any, engine: Optional[Any] = ...) -> None: ...
     def __fspath__(self): ...
-    def parse(self, sheet_name: int = ..., header: int = ..., names: Optional[Any] = ..., index_col: Optional[Any] = ..., usecols: Optional[Any] = ..., squeeze: bool = ..., converters: Optional[Any] = ..., true_values: Optional[Any] = ..., false_values: Optional[Any] = ..., skiprows: Optional[Any] = ..., nrows: Optional[Any] = ..., na_values: Optional[Any] = ..., parse_dates: bool = ..., date_parser: Optional[Any] = ..., thousands: Optional[Any] = ..., comment: Optional[Any] = ..., skipfooter: int = ..., convert_float: bool = ..., mangle_dupe_cols: bool = ..., **kwds: Any): ...
+    def parse(
+        self,
+        sheet_name: int = ...,
+        header: int = ...,
+        names: Optional[Any] = ...,
+        index_col: Optional[Any] = ...,
+        usecols: Optional[Any] = ...,
+        squeeze: bool = ...,
+        converters: Optional[Any] = ...,
+        true_values: Optional[Any] = ...,
+        false_values: Optional[Any] = ...,
+        skiprows: Optional[Any] = ...,
+        nrows: Optional[Any] = ...,
+        na_values: Optional[Any] = ...,
+        parse_dates: bool = ...,
+        date_parser: Optional[Any] = ...,
+        thousands: Optional[Any] = ...,
+        comment: Optional[Any] = ...,
+        skipfooter: int = ...,
+        convert_float: bool = ...,
+        mangle_dupe_cols: bool = ...,
+        **kwds: Any
+    ): ...
     @property
     def book(self): ...
     @property
@@ -35,7 +108,14 @@ class ExcelWriter(metaclass=abc.ABCMeta):
     def supported_extensions(self) -> Any: ...
     def engine(self) -> Any: ...
     @abc.abstractmethod
-    def write_cells(self, cells: Any, sheet_name: Optional[Any] = ..., startrow: int = ..., startcol: int = ..., freeze_panes: Optional[Any] = ...) -> Any: ...
+    def write_cells(
+        self,
+        cells: Any,
+        sheet_name: Optional[Any] = ...,
+        startrow: int = ...,
+        startcol: int = ...,
+        freeze_panes: Optional[Any] = ...,
+    ) -> Any: ...
     @abc.abstractmethod
     def save(self) -> Any: ...
     sheets: Any = ...
@@ -43,7 +123,15 @@ class ExcelWriter(metaclass=abc.ABCMeta):
     date_format: str = ...
     datetime_format: str = ...
     mode: Any = ...
-    def __init__(self, path: Any, engine: Optional[Any] = ..., date_format: Optional[Any] = ..., datetime_format: Optional[Any] = ..., mode: str = ..., **engine_kwargs: Any) -> None: ...
+    def __init__(
+        self,
+        path: Any,
+        engine: Optional[Any] = ...,
+        date_format: Optional[Any] = ...,
+        datetime_format: Optional[Any] = ...,
+        mode: str = ...,
+        **engine_kwargs: Any
+    ) -> None: ...
     def __fspath__(self): ...
     @classmethod
     def check_extension(cls, ext: Any): ...
@@ -55,9 +143,22 @@ class _OpenpyxlWriter(ExcelWriter):
     engine: str = ...
     supported_extensions: Any = ...
     book: Any = ...
-    def __init__(self, path: Any, engine: Optional[Any] = ..., mode: str = ..., **engine_kwargs: Any) -> None: ...
+    def __init__(
+        self,
+        path: Any,
+        engine: Optional[Any] = ...,
+        mode: str = ...,
+        **engine_kwargs: Any
+    ) -> None: ...
     def save(self): ...
-    def write_cells(self, cells: Any, sheet_name: Optional[Any] = ..., startrow: int = ..., startcol: int = ..., freeze_panes: Optional[Any] = ...) -> None: ...
+    def write_cells(
+        self,
+        cells: Any,
+        sheet_name: Optional[Any] = ...,
+        startrow: int = ...,
+        startcol: int = ...,
+        freeze_panes: Optional[Any] = ...,
+    ) -> None: ...
 
 class _XlwtWriter(ExcelWriter):
     engine: str = ...
@@ -65,9 +166,23 @@ class _XlwtWriter(ExcelWriter):
     book: Any = ...
     fm_datetime: Any = ...
     fm_date: Any = ...
-    def __init__(self, path: Any, engine: Optional[Any] = ..., encoding: Optional[Any] = ..., mode: str = ..., **engine_kwargs: Any) -> None: ...
+    def __init__(
+        self,
+        path: Any,
+        engine: Optional[Any] = ...,
+        encoding: Optional[Any] = ...,
+        mode: str = ...,
+        **engine_kwargs: Any
+    ) -> None: ...
     def save(self): ...
-    def write_cells(self, cells: Any, sheet_name: Optional[Any] = ..., startrow: int = ..., startcol: int = ..., freeze_panes: Optional[Any] = ...) -> None: ...
+    def write_cells(
+        self,
+        cells: Any,
+        sheet_name: Optional[Any] = ...,
+        startrow: int = ...,
+        startcol: int = ...,
+        freeze_panes: Optional[Any] = ...,
+    ) -> None: ...
 
 class _XlsxStyler:
     STYLE_MAPPING: Any = ...
@@ -78,6 +193,21 @@ class _XlsxWriter(ExcelWriter):
     engine: str = ...
     supported_extensions: Any = ...
     book: Any = ...
-    def __init__(self, path: Any, engine: Optional[Any] = ..., date_format: Optional[Any] = ..., datetime_format: Optional[Any] = ..., mode: str = ..., **engine_kwargs: Any) -> None: ...
+    def __init__(
+        self,
+        path: Any,
+        engine: Optional[Any] = ...,
+        date_format: Optional[Any] = ...,
+        datetime_format: Optional[Any] = ...,
+        mode: str = ...,
+        **engine_kwargs: Any
+    ) -> None: ...
     def save(self): ...
-    def write_cells(self, cells: Any, sheet_name: Optional[Any] = ..., startrow: int = ..., startcol: int = ..., freeze_panes: Optional[Any] = ...) -> None: ...
+    def write_cells(
+        self,
+        cells: Any,
+        sheet_name: Optional[Any] = ...,
+        startrow: int = ...,
+        startcol: int = ...,
+        freeze_panes: Optional[Any] = ...,
+    ) -> None: ...

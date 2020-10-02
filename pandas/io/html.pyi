@@ -12,7 +12,9 @@ class _HtmlFrameParser:
     attrs: Any = ...
     encoding: Any = ...
     displayed_only: Any = ...
-    def __init__(self, io: Any, match: Any, attrs: Any, encoding: Any, displayed_only: Any) -> None: ...
+    def __init__(
+        self, io: Any, match: Any, attrs: Any, encoding: Any, displayed_only: Any
+    ) -> None: ...
     def parse_tables(self): ...
 
 class _BeautifulSoupHtml5LibFrameParser(_HtmlFrameParser):
@@ -21,4 +23,21 @@ class _BeautifulSoupHtml5LibFrameParser(_HtmlFrameParser):
 class _LxmlFrameParser(_HtmlFrameParser):
     def __init__(self, *args: Any, **kwargs: Any) -> None: ...
 
-def read_html(io: Any, match: str = ..., flavor: Optional[Any] = ..., header: Optional[Any] = ..., index_col: Optional[Any] = ..., skiprows: Optional[Any] = ..., attrs: Optional[Any] = ..., parse_dates: bool = ..., tupleize_cols: Optional[Any] = ..., thousands: str = ..., encoding: Optional[Any] = ..., decimal: str = ..., converters: Optional[Any] = ..., na_values: Optional[Any] = ..., keep_default_na: bool = ..., displayed_only: bool = ...): ...
+def read_html(
+    io: Any,
+    match: str = ...,
+    flavor: Optional[Any] = ...,
+    header: Optional[Any] = ...,
+    index_col: Optional[Any] = ...,
+    skiprows: Optional[Any] = ...,
+    attrs: Optional[Any] = ...,
+    parse_dates: bool = ...,
+    tupleize_cols: Optional[Any] = ...,
+    thousands: str = ...,
+    encoding: Optional[Any] = ...,
+    decimal: str = ...,
+    converters: Optional[Any] = ...,
+    na_values: Optional[Any] = ...,
+    keep_default_na: bool = ...,
+    displayed_only: bool = ...,
+): ...

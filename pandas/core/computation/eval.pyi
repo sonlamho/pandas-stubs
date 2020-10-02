@@ -4,4 +4,15 @@
 
 from typing import Any, Optional
 
-def eval(expr: Any, parser: str = ..., engine: Optional[Any] = ..., truediv: bool = ..., local_dict: Optional[Any] = ..., global_dict: Optional[Any] = ..., resolvers: Any = ..., level: int = ..., target: Optional[Any] = ..., inplace: bool = ...): ...
+def eval(
+    expr: Any,
+    parser: str = ...,
+    engine: Optional[Any] = ...,
+    truediv: bool = ...,
+    local_dict: Optional[Any] = ...,
+    global_dict: Optional[Any] = ...,
+    resolvers: Any = ...,
+    level: int = ...,
+    target: Optional[Any] = ...,
+    inplace: bool = ...,
+): ...

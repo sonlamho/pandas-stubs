@@ -4,8 +4,21 @@
 
 from typing import Any, Optional
 
-def deprecate(name: Any, alternative: Any, version: Any, alt_name: Optional[Any] = ..., klass: Optional[Any] = ..., stacklevel: int = ..., msg: Optional[Any] = ...): ...
-def deprecate_kwarg(old_arg_name: Any, new_arg_name: Any, mapping: Optional[Any] = ..., stacklevel: int = ...): ...
+def deprecate(
+    name: Any,
+    alternative: Any,
+    version: Any,
+    alt_name: Optional[Any] = ...,
+    klass: Optional[Any] = ...,
+    stacklevel: int = ...,
+    msg: Optional[Any] = ...,
+): ...
+def deprecate_kwarg(
+    old_arg_name: Any,
+    new_arg_name: Any,
+    mapping: Optional[Any] = ...,
+    stacklevel: int = ...,
+): ...
 def rewrite_axis_style_signature(name: Any, extra_params: Any): ...
 
 class Substitution:

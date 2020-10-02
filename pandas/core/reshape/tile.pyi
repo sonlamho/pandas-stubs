@@ -4,5 +4,21 @@
 
 from typing import Any, Optional
 
-def cut(x: Any, bins: Any, right: bool = ..., labels: Optional[Any] = ..., retbins: bool = ..., precision: int = ..., include_lowest: bool = ..., duplicates: str = ...): ...
-def qcut(x: Any, q: Any, labels: Optional[Any] = ..., retbins: bool = ..., precision: int = ..., duplicates: str = ...): ...
+def cut(
+    x: Any,
+    bins: Any,
+    right: bool = ...,
+    labels: Optional[Any] = ...,
+    retbins: bool = ...,
+    precision: int = ...,
+    include_lowest: bool = ...,
+    duplicates: str = ...,
+): ...
+def qcut(
+    x: Any,
+    q: Any,
+    labels: Optional[Any] = ...,
+    retbins: bool = ...,
+    precision: int = ...,
+    duplicates: str = ...,
+): ...

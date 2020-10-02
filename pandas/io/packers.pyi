@@ -8,7 +8,9 @@ from typing import Any, Optional
 compressor: Any
 
 def to_msgpack(path_or_buf: Any, *args: Any, **kwargs: Any): ...
-def read_msgpack(path_or_buf: Any, encoding: str = ..., iterator: bool = ..., **kwargs: Any): ...
+def read_msgpack(
+    path_or_buf: Any, encoding: str = ..., iterator: bool = ..., **kwargs: Any
+): ...
 
 dtype_dict: Any
 
@@ -21,14 +23,52 @@ def convert(values: Any): ...
 def unconvert(values: Any, dtype: Any, compress: Optional[Any] = ...): ...
 def encode(obj: Any): ...
 def decode(obj: Any): ...
-def pack(o: Any, default: Any = ..., encoding: str = ..., unicode_errors: str = ..., use_single_float: bool = ..., autoreset: int = ..., use_bin_type: int = ...): ...
-def unpack(packed: Any, object_hook: Any = ..., list_hook: Optional[Any] = ..., use_list: bool = ..., encoding: str = ..., unicode_errors: str = ..., object_pairs_hook: Optional[Any] = ..., max_buffer_size: int = ..., ext_hook: Any = ...): ...
+def pack(
+    o: Any,
+    default: Any = ...,
+    encoding: str = ...,
+    unicode_errors: str = ...,
+    use_single_float: bool = ...,
+    autoreset: int = ...,
+    use_bin_type: int = ...,
+): ...
+def unpack(
+    packed: Any,
+    object_hook: Any = ...,
+    list_hook: Optional[Any] = ...,
+    use_list: bool = ...,
+    encoding: str = ...,
+    unicode_errors: str = ...,
+    object_pairs_hook: Optional[Any] = ...,
+    max_buffer_size: int = ...,
+    ext_hook: Any = ...,
+): ...
 
 class Packer(_Packer):
-    def __init__(self, default: Any = ..., encoding: str = ..., unicode_errors: str = ..., use_single_float: bool = ..., autoreset: int = ..., use_bin_type: int = ...) -> None: ...
+    def __init__(
+        self,
+        default: Any = ...,
+        encoding: str = ...,
+        unicode_errors: str = ...,
+        use_single_float: bool = ...,
+        autoreset: int = ...,
+        use_bin_type: int = ...,
+    ) -> None: ...
 
 class Unpacker(_Unpacker):
-    def __init__(self, file_like: Optional[Any] = ..., read_size: int = ..., use_list: bool = ..., object_hook: Any = ..., object_pairs_hook: Optional[Any] = ..., list_hook: Optional[Any] = ..., encoding: str = ..., unicode_errors: str = ..., max_buffer_size: int = ..., ext_hook: Any = ...) -> None: ...
+    def __init__(
+        self,
+        file_like: Optional[Any] = ...,
+        read_size: int = ...,
+        use_list: bool = ...,
+        object_hook: Any = ...,
+        object_pairs_hook: Optional[Any] = ...,
+        list_hook: Optional[Any] = ...,
+        encoding: str = ...,
+        unicode_errors: str = ...,
+        max_buffer_size: int = ...,
+        ext_hook: Any = ...,
+    ) -> None: ...
 
 class Iterator:
     path: Any = ...
