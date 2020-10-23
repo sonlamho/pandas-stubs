@@ -6,6 +6,7 @@
 # from .core.indexes.base import Index
 from pandas.core import base
 from pandas.core.generic import NDFrame
+from pandas.core.dtypes.dtypes import CategoricalDtype
 from typing import (
     Dict,
     Any,
