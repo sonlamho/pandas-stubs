@@ -1029,3 +1029,16 @@ def date_range(
     closed: Optional[Any] = ...,
     **kwargs: Any
 ) -> DatetimeIndex: ...
+def to_datetime(
+    arg: _S,
+    errors: str = "raise",
+    dayfirst: bool = False,
+    yearfirst: bool = False,
+    utc: Optional[bool] = None,
+    format: Optional[str] = None,
+    exact: bool = True,
+    unit: Optional[str] = None,
+    infer_datetime_format: bool = False,
+    origin="unix",
+    cache: bool = True,
+) -> _S: ...
