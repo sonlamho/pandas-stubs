@@ -42,9 +42,9 @@ _NUMBER = Union[float, generic]
 _S = TypeVar("_S")
 _KT = TypeVar("_KT")
 _VT = TypeVar("_VT")
-_C = TypeVar("_C", bound="Comparable")
+_C = TypeVar("_C", bound="__Comparable")
 
-class Comparable(Protocol):
+class __Comparable(Protocol):
     @abstractmethod
     def __eq__(self, other: Any) -> bool:
         pass
