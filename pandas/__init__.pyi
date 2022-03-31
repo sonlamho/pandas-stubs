@@ -38,6 +38,7 @@ missing_dependencies: Any
 module: Any
 v: Any
 
+NoneType = type(None)
 _NUMBER = Union[float, generic]
 _S = TypeVar("_S")
 _KT = TypeVar("_KT")
@@ -1084,3 +1085,21 @@ def to_datetime(
     origin="unix",
     cache: bool = True,
 ) -> _S: ...
+def pivot_table(
+    data: DataFrame,
+    values: Union[Hashable, NoneType, Sequence[Union[Hashable, NoneType]]] = ...,
+    index: Union[Hashable, NoneType, Sequence[Union[Hashable, NoneType]]] = ...,
+    columns: Union[Hashable, NoneType, Sequence[Union[Hashable, NoneType]]] = ...,
+    aggfunc: Union[Callable, Dict, str, Iterable[Union[Callable, str]]] = ...,
+    fill_value: Optional[float] = ...,
+    margins: bool = ...,
+    dropna: bool = ...,
+    margins_name: str = ...,
+    observed: bool = ...,
+) -> DataFrame: ...
+def pivot(
+    data: DataFrame,
+    index: Union[Hashable, NoneType, Sequence[Union[Hashable, NoneType]]] = ...,
+    columns: Union[Hashable, NoneType, Sequence[Union[Hashable, NoneType]]] = ...,
+    values: Union[Hashable, NoneType, Sequence[Union[Hashable, NoneType]]] = ...,
+) -> DataFrame: ...
