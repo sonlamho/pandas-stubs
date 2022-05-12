@@ -38,6 +38,8 @@ missing_dependencies: Any
 module: Any
 v: Any
 
+NaT: Any
+
 NoneType = type(None)
 _NUMBER = Union[float, generic]
 _S = TypeVar("_S")
