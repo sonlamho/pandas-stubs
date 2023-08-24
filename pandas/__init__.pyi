@@ -796,7 +796,7 @@ class Timestamp(object):
     max: "Timestamp" = ...
     def __new__(
         cls: Type[_S],
-        ts_input: Union[_S, datetime, str, int, float] = ...,
+        ts_input: Union[_S, datetime, str, int, float, None] = ...,
         freq: Optional[str] = ...,
         tz: Any = ...,
         unit: Any = ...,
